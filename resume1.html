@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="us" style="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <!-- fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="./resume_styles.css" rel="stylesheet">
+  <!-- ./fonts -->
+  <!-- css -->
+  <style type="text/css">
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    html[lang=nl] .sidebar {
+      padding-left: 15px;
+    }
+
+    html[lang=nl] .sidebar--label {
+      display: inline-block;
+      width: 100%;
+      max-width: 106px;
+      margin-top: -2px;
+    }
+
+    html[lang=nl] .sidebar--item-align-right {
+      display: inline-block;
+      margin-right: 10px;
+      width: 60px;
+      text-align: right;
+    }
+
+    body {
+      width: 21cm;
+      height: 100%;
+      min-height: 29.7cm;
+      position: relative;
+      margin: 0;
+      padding: 0 0;
+      color: #333333;
+      line-height: 22px;
+      font: 15px "Source Sans Pro", Arial;
+      font-style: normal;
+    }
+
+    h1 {
+      font-style: normal;
+      font-size: 30px;
+      margin: 0 0 20px 0;
+      padding: 13px 0 15px 0;
+      font-weight: 600;
+      border-bottom: 1px solid #d2d2d2;
+    }
+
+    h1 span {
+      position: relative;
+      font-style: normal;
+      display: inline;
+      margin-right: 1px;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+      max-width: 430px;
+    }
+
+    p {
+      color: #4c4c4c;
+      line-height: 18px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: #d2d2d2;
+    }
+
+    .section--first-name {
+      display: inline-block;
+    }
+
+    .section--last-name {
+      display: inline-block;
+      position: relative;
+      left: 5px;
+    }
+
+    .sections {
+      left: 235px;
+      position: relative;
+      width: 535px;
+    }
+
+    .section {
+      position: relative;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .section p {
+      display: block;
+      font-style: normal;
+    }
+
+    .section:last-child {
+      border: none;
+    }
+
+    .section.section--summary {
+      margin-top: -10px;
+    }
+
+    .section--title {
+      display: block;
+      position: relative;
+      z-index: 99;
+      margin: 10px 0 0 0;
+      font-weight: 600;
+      /* background: #fff; */
+      padding: 10px 0 2px 0;
+      page-break-inside: avoid;
+      /* border-top: 1px solid #d2d2d2; */
+      border-bottom: 1px solid #d2d2d2;
+    }
+
+    .section--title span {
+      display: inline-block;
+      margin-right: 0px;
+    }
+
+    .section--heading-group {
+      display: block;
+      padding: 15px 0 0 0;
+      margin: 0;
+      /*page-break-inside: avoid;*/
+    }
+
+    .section--list {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--list.skills {
+      padding-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .section--item {
+      display: block;
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--item.skills {
+      display: inline-block;
+      padding-top: 8px;
+      padding-bottom: 0;
+      width: 100%;
+      margin: 0;
+      padding-left: 5px;
+    }
+
+    .section--item.skills h3 {
+      font-size: 15px;
+    }
+
+    .section--item.skills:last-child {
+      padding-bottom: 0;
+    }
+
+    .skills--label {
+      display: inline-block;
+      width: 175px;
+      margin: 5px 0 0 -5px;
+    }
+
+    .skills--level {
+      display: inline-block;
+      position: relative;
+      top: 0;
+      height: 7px;
+      width: 150px;
+      padding: 0;
+      margin: 0;
+      background: #eaeaea;
+      border-radius: 6px;
+    }
+
+    .skills--level-filler {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: #b1b1b1;
+      border-radius: 6px;
+    }
+
+    .skills--stars {
+      display: inline-block;
+      position: relative;
+      top: 4px;
+    }
+
+    .skills--stars svg {
+      fill: #b1b1b1;
+    }
+
+    .skills--stars svg.active {
+      fill: #2b2b38;
+    }
+
+    .section--date {
+      position: absolute;
+      right: 0;
+      text-align: right;
+      top: 16px;
+      width: 125px;
+      width: 125px;
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--heading {
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section--sub-heading {
+      display: block;
+      padding: 3px 0 0 0;
+      margin: 0;
+      font-style: italic;
+      font-size: 15px;
+    }
+
+    .section--content {
+      display: block;
+      padding: 5px 0 0 0;
+      margin: 0;
+    }
+
+    .section--content p {
+      display: block;
+    }
+
+    .section--content ul,
+    .section--content ol {
+      white-space: normal;
+      font-weight: 400;
+      list-style-position: outside;
+      color: #4c4c4c;
+      margin: 0;
+      padding: 0 0 0 16px;
+      text-align: left;
+    }
+
+    .section--content ul li,
+    .section--content ol li {
+      line-height: 18px;
+    }
+
+    .section--content ul li strong,
+    .section--content ol li strong {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .section--content ul li {
+      list-style-type: disc;
+    }
+
+    .section--content ol {
+      padding-left: 14px;
+    }
+
+    .section--content-single-textarea {
+      padding-top: 10px;
+    }
+
+    .sidebar--bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 215px;
+      background: #2b2b38;
+      height: 18000px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .sidebar {
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      color: #fff;
+      padding: 29px 0 0 20px;
+      width: 215px;
+      height: auto;
+    }
+
+    .sidebar.sidebar--no-avatar {
+      padding-top: 16px;
+    }
+
+    .avatar {
+      display: inline-block;
+      padding: 0;
+      margin: 0 0 0 9px;
+      height: 155px;
+      width: 155px;
+      border-radius: 50%;
+      background-size: cover !important;
+    }
+
+    .sidebar--data {
+      display: block;
+    }
+
+    .sidebar--title {
+      font-size: 20px;
+      font-style: normal;
+      padding: 20px 0 11px 0;
+      margin: 0 0 10px 0;
+      page-break-inside: avoid;
+      border-bottom: 1px solid #fff;
+    }
+
+    .sidebar--title span {
+      font-weight: 400;
+      font-style: normal;
+      margin-right: 0px;
+    }
+
+    .sidebar--title svg {
+      position: relative;
+      top: 4px;
+      margin-right: 4px;
+    }
+
+    .sidebar--label {
+      font-weight: 600;
+    }
+
+    .sidebar--list {
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidebar--item {
+      display: block;
+      list-style: none;
+      font-size: 15px;
+      margin: 0;
+      page-break-inside: avoid;
+      padding: 8px 5px 0 0;
+    }
+
+    .sidebar--item:last-child {
+      padding-bottom: 0;
+    }
+
+    .sidebar--item-text {
+      line-height: 21px;
+    }
+
+    .sidebar--item-align-right {
+      float: right;
+      margin-right: 20px;
+    }
+
+    .c--434a54 .sidebar--bg,
+    .c--434a54 .skills--level-filler {
+      background: #434a54 !important;
+    }
+
+    .c--efa100 .sidebar--bg,
+    .c--efa100 .skills--level-filler {
+      background: #efa100 !important;
+    }
+
+    .c--3f6592 .sidebar--bg,
+    .c--3f6592 .skills--level-filler {
+      background: #3f6592 !important;
+    }
+
+    .c--d770ad .sidebar--bg,
+    .c--d770ad .skills--level-filler {
+      background: #d770ad !important;
+    }
+
+    .c--da4453 .sidebar--bg,
+    .c--da4453 .skills--level-filler {
+      background: #da4453 !important;
+    }
+
+    strong {
+      white-space: nowrap;
+    }
+
+    /* Direction RTL overrides */
+    html[dir="rtl"] h1 span {
+      margin-right: initial;
+      margin-left: 1px;
+    }
+
+    html[dir="rtl"] p {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .section--last-name {
+      left: initial;
+      right: 5px;
+    }
+
+    html[dir="rtl"] .sections {
+      left: initial;
+      right: 235px;
+    }
+
+    html[dir="rtl"] .section--title span {
+      margin-right: initial;
+      margin-left: 0;
+    }
+
+    html[dir="rtl"] .section--item.skills {
+      padding-left: initial;
+      padding-right: 5px;
+    }
+
+    html[dir="rtl"] .skills--label {
+      margin-left: 0;
+      margin-right: -5px;
+    }
+
+    html[dir="rtl"] .skills--level-filler {
+      left: initial;
+      right: 0;
+    }
+
+    html[dir="rtl"] .section--date {
+      right: initial;
+      left: 0;
+      text-align: left;
+    }
+
+    html[dir="rtl"] .section--content ul,
+    html[dir="rtl"] .section--content ol {
+      padding-left: 0;
+      padding-right: 16px;
+      text-align: right;
+    }
+
+    html[dir="rtl"] .section--content ul li strong,
+    html[dir="rtl"] .section--content ol li strong {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .section--content ol {
+      padding-left: initial;
+      padding-right: 14px;
+    }
+
+    html[dir="rtl"] .sidebar--bg {
+      left: initial;
+      right: 0;
+    }
+
+    html[dir="rtl"] .sidebar {
+      left: 0;
+      right: 0;
+      padding-left: 0;
+      padding-right: 20px;
+    }
+
+    html[dir="rtl"] .avatar {
+      margin-left: 0;
+      margin-right: 9px;
+    }
+
+    html[dir="rtl"] .sidebar--title span {
+      margin-right: initial;
+      margin-left: 0;
+    }
+
+    html[dir="rtl"] .sidebar--title svg {
+      margin-right: initial;
+      margin-left: 4px;
+    }
+
+    html[dir="rtl"] .sidebar--item-align-right {
+      float: left;
+      margin-right: initial;
+      margin-left: 20px;
+    }
+
+    /* Ara lang overrides */
+    html[lang="ara"] body {
+      font-family: "Noto Sans Arabic", sans-serif;
+    }
+  </style>
+  <!-- ./css -->
+</head>
+
+<body class="c--3f6592" style="">
+  <div class="sidebar--bg" style=""></div>
+  <aside class="sidebar  ">
+    <div class="sidebar--data">
+      <h2 class="sidebar--title">
+        Personal
+      </h2>
+      <ul class="sidebar--list">
+        <li class="sidebar--item">
+          <span class="sidebar--label">Name</span><br>
+          Hammadh Abdul Rahman
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Address</span><br>
+          Male', Maldives <br>
+        </li>
+        <li class="sidebar--item">
+          <!-- <span class="sidebar--label"><i class="fas fa-mobile-alt" style="margin: 0 1.5px;"></i> Phone number</span><br> -->
+          <span dir="ltr">+960 7838533</span>
+        </li>
+        <li class="sidebar--item">
+          <!-- <span class="sidebar--label"><i class="fas fa-at"></i> Email</span><br> -->
+          hammadhu.ar@gmail.com
+        </li>
+        <li class="sidebar--item">
+          <!-- <span class="sidebar--label" style="color: white;"><i class="fa fa-globe"></i> Website</span><br> -->
+          <a style="color: white;" href="https://bulhaa.github.io/" target="_blank">
+            https://bulhaa.github.io/</a>
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label"><a style="color: white; text-decoration: none;"
+              href="https://www.linkedin.com/in/hammadh-abdul-rahman-18b5b9119/" target="_blank">
+              <i class="fab fa-linkedin-in"></i> LinkedIn</a></span><br>
+
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label"><a style="color: white; text-decoration: none;"
+              href="https://github.com/bulhaa?tab=repositories" target="_blank">
+              <i class="fab fa-github"></i> GitHub</a></span><br>
+
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar--data">
+      <h2 class="sidebar--title">
+        Interests
+      </h2>
+      <ul class="sidebar--list">
+        <li class="sidebar--item">
+          <span class="sidebar--label">Running</span>
+        </li>
+        <li class="sidebar--item">
+          <span class="sidebar--label">Gaming</span>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <section class="sections">
+    <div class="section--name">
+      <h1>
+        Hammadh Abdul Rahman
+      </h1>
+    </div>
+    <div class="section">
+      <div class="section section--summary">
+        <div class="section--content">
+          <p>Full Stack Developer with 7 years of experience. Skilled in PHP</p>
+          <p>and Laravel Framework, JavaScript, Java, AutoHotkey, C#, VB,</p>
+          <p>SQL, and Tailwind CSS. </p>
+          <!-- <p>SQL, and Tailwind CSS. Experience making automation using</p>
+                    <p>SeleniumJS that runs 24/7 and also Autohotkey automation that</p>
+                    <p>can be used for day-to-day tasks.</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="section" style="background-color: #70809020;">
+      <div class="section--title">
+        <h2>
+          Education and Qualifications
+        </h2>
+      </div>
+      <ol class="section--list">
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date">
+              Jan 2013 - Dec 2016
+            </div>
+            <div class="section--heading">
+              <h3>Bachelor In Information Technology</h3>
+            </div>
+            <div class="section--sub-heading">
+              Maldives National University </div>
+          </div>
+        </li>
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date">
+              Feb 2024
+            </div>
+            <div class="section--heading">
+              <h3>Responsive Web Design</h3>
+            </div>
+            <div class="section--sub-heading">freeCodeCamp</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2>Portfolio</h2>
+      </div>
+      <div class="section--time-line-overlay"></div>
+      <ol class="section--list">
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date">
+            </div>
+            <div class="section--heading">
+              <h3><a style="color: black; font-weight: 500;" target="_blank"
+                  href="https://bulhaa.github.io/">https://bulhaa.github.io/</a></h3>
+            </div>
+            <div class="section--sub-heading">
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section" style="background-color: #70809020;">
+      <div class="section--title">
+        <h2>
+          Skills
+        </h2>
+      </div>
+      <div class="section--time-line-overlay"></div>
+      <ol class="section--list skills">
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>PHP</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>Laravel</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:100%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>MySQL</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:75%;"></div>
+          </div>
+        </li>
+        <li class="section--item skills">
+          <div class="skills--label">
+            <h3>Tailwind CSS</h3>
+          </div>
+          <div class="skills--level">
+            <div class="skills--level-filler" style="width:75%;"></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="section">
+      <div class="section--title">
+        <h2>
+          Work experience
+        </h2>
+      </div>
+      <div class="section--time-line-overlay"></div>
+      <ol class="section--list">
+        <li class="section--item">
+          <div class="section--heading-group">
+            <div class="section--date">Oct 2016 - Present</div>
+            <div class="section--heading">
+              <h3>Software Engineer</h3>
+            </div>
+            <div class="section--sub-heading">
+              National Centre for Information Technology </div>
+          </div>
+          <div class="section--content">
+            <p><strong>Case and Task Management System</strong></p>
+            <p>• Spearheaded a PHP Laravel + MySQL project for managing Cases and Tasks, resembling a ticket
+              management system with additional task management features.</p>
+            <p>• Worked solo on the project from inception until later joined by another developer.</p>
+            <p>• Generated migration files in Laravel for creating DB tables and utilized scaffolders for
+              auto‑generating models, controllers, repositories, resources, routes, tests, policies,
+              enums,permissions, factories, seeders, views, and menus.</p>
+            <p>• Developed and modified scaffolders and scaffold templates to align with the project's
+              progress, facilitating adherence to agile methodology and swift project completion.</p>
+            <p>• Enabled rapid updates to relevant files when implementing changes to the database
+              structure.</p>
+            <p>• Implemented Livewire components for each table, facilitating easy integration into viewsand
+              enhancing code manageability by shortening code files.</p>
+            <p>It was successfully launched and is currently in use. We are now planning to create a mobile
+              app.</p>
+            <p><br></p>
+            <p><strong>eAdmin ‑ Human Resources Information Software</strong></p>
+            <p>• Worked on an already developed web‑based HRMS for fetching and displaying attendance from
+              fingerprint hardware managing leaves of staff and processing payroll. Itis a multi‑tenant
+              system so it is used by several organisations.</p>
+            <p>• Mainly worked on performance optimization, UI/UX and bug fixing.</p>
+            <p>It is still in use and used by several organizations and plans are made to release a new
+              application with the latest technologies and PHP and Laravel and new UI. The current system
+              is made from C# .net. Also there are plans to release a mobile app.</p>
+            <p><br></p>
+            <p><strong>Makudi ‑ Chemical Warehouse Management System</strong></p>
+            <p>• Worked on a system developed in response to fire incidents at Chemical Warehouses,aiming to
+              enhance safety and streamline Chemical Import Licensing for businesses.</p>
+            <p>• The system, initially developed in C# .Net and using SQL Server, faced challenges as users
+              couldn't utilize it due to bugs and missing features.</p>
+            <p>• Took charge of bug fixing and addressed change requests, ensuring timely resolution to
+              enable users to start using the software.</p>
+            <p>• Played a pivotal role in making the system operational and meeting the safety and licensing
+              needs of Chemical Warehouses.</p>
+            <p>The software was successfully launched and is still in use.</p>
+            <p><br></p>
+            <p><strong>eCouncil ‑ Vital Registry Management System</strong></p>
+            <p>• Contributed to a project focused on issuing Birth Certificates, Death Certificates,
+              andHouse Registrations, initially built using PHP, Yii Framework and MySQL.</p>
+            <p>• Users encountered issues preventing the utilization of the software, including bugs and the
+              absence of certain features.</p>
+            <p>• Addressed user requests for changes and implemented new features to make the software
+              usable.</p>
+            <p>• Introduced UI/UX improvements, enabling the creation of new individuals directly within the
+              form being filled, enhancing user experience.</p>
+            <p>• Implemented MySQL indexing for a non‑indexed column used in a query's WHERE
+              clause,resulting in a notable speed increase from 18 seconds to 200 milliseconds.</p>
+            <p style="padding-bottom: 20px;">The system was rolled out successfully during Covid‑19 and is
+              still in use and plans are
+              being made to release a new major version. Expanded the software's scope from being
+              council‑centric to incorporating features from another hospital‑used software, addressing
+              performance and data‑saving issues in the latter. Optimized software performance by
+              identifying and addressing N+1 query issues through eager loading, significantly improving
+              response time.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</body>
+
+</html>
